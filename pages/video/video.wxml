@@ -10,15 +10,41 @@
   </view>
 
   <!-- 导航区域 -->
-  <scroll-view scroll-x class="navScroll" enable-flex scroll-into-view="{{'scroll' + navId}}" scroll-with-animation>
-    <view id="{{'scroll' + item.id}}" class="navItem" wx:for="{{videoGroupList}}" wx:key="id">
-      <view class="navContent {{navId === item.id?'active': ''}}" bindtap="changeNav" id="{{item.id}}"
-        data-id="{{item.id}}">
-        {{item.name}}
+  <scroll-view scroll-x class="navScroll" enable-flex>
+    <view class = "navItem">
+      <view class="navContent active">
+        推荐
+      </view>
+    </view><view class = "navItem">
+      <view class="navContent">
+        推荐
+      </view>
+    </view><view class = "navItem">
+      <view class="navContent">
+        推荐
+      </view>
+    </view><view class = "navItem">
+      <view class="navContent">
+        推荐
+      </view>
+    </view><view class = "navItem">
+      <view class="navContent">
+        推荐
+      </view>
+    </view><view class = "navItem">
+      <view class="navContent">
+        推荐
+      </view>
+    </view><view class = "navItem">
+      <view class="navContent">
+        推荐
+      </view>
+    </view><view class = "navItem">
+      <view class="navContent">
+        推荐
       </view>
     </view>
   </scroll-view>
-
   <!-- 视频列表区域 -->
   <scroll-view scroll-y class="videoScroll" refresher-enabled bindrefresherrefresh="handleRefresher"
     refresher-triggered="{{isTriggered}}" bindscrolltolower="handleToLower">
